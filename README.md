@@ -8,5 +8,5 @@ Copyright 2013 Mehmet Akif TAŞOVA <makiftasova@gmail.com>
 
 List of programs:
 
-  * BluetoothNameChanger -- Cahnges visible name of Bluetooth device on Gnome3 
+  * PrettyHostnameChanger -- Cahnges Pretty Hostname of OS 
  

@@ -1,10 +1,13 @@
 /*
- * btNameFix.c
+ * chphostname.c
  * 
- * Bluetooth Name Changer - Changes Bluetooth visible name on Gnome3
+ * Pretty Hostname Changer - Changes Pretty Hostname of System
  *  Directly modifies /etc/machine-info file (if there is not, creates it)
  *  Same job can easily done by adding PRETTY_HOSTNAME=[NAME] line into
- *  file
+ *  file.
+ * 
+ * Static Hostname can be change by "hostnamectl set-hostname [NAME]"
+ *  command via terminal (at least for Fedora 18)
  * 
  * Copyright 2013 Mehmet Akif TAŞOVA <makiftasova@gmail.com>
  * 
@@ -66,4 +69,4 @@ void usage(const char* execName) {
     return;
 }
 
-/* End of btNameFix.c */
+/* End of chphostname.c */
