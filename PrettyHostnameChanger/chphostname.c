@@ -41,12 +41,9 @@ void usage(const char* execName);
 
 int main(int argc, char** argv) {
 
-    int uid = -1;
     FILE* outFilePtr;
 
-    uid = getuid();
-
-    if (0 != uid) {
+    if (0 != getuid()) {
         printf("Root permissions required for this operation.\n");
         return (EXIT_NONROOT);
     }
@@ -66,6 +63,12 @@ int main(int argc, char** argv) {
 void usage(const char* execName) {
     printf("Usage:\n------\n");
     printf("%s [NAME]\n", execName);
+    printf("\nWARNING: This program requires root privileges to do its job\n\n");
+    printf("Exit Codes:\n-----------\n");
+    printf("\t0 - Exit Success\n");
+    printf("\t1 - Failed to run because of lack of root privileges\n");
+    printf("\t2 - Failed to run because of illegal arguments given\n");
+
     return;
 }
 
