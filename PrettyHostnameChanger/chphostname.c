@@ -43,14 +43,14 @@ int main(int argc, char** argv) {
 
     FILE* outFilePtr;
 
-    if (0 != getuid()) {
-        printf("Root permissions required for this operation.\n");
-        return (EXIT_NONROOT);
-    }
-
     if (argc != 2) {
         usage(argv[0]);
         return (EXIT_ILLEGAL_ARGS);
+    }
+
+    if (0 != getuid()) {
+        printf("Root permissions required for this operation.\n");
+        return (EXIT_NONROOT);
     }
 
     outFilePtr = fopen("/etc/machine-info", "w");
