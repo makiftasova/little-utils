@@ -1,11 +1,7 @@
-CC=gcc
-SRC=chphostname.c
-EXEC=chphostname
-#Extra parameters
-PARAMS=-ansi
-
 all:
-	${CC} ${PARAMS} ${SRC} -o ${EXEC}
+	@echo Compiling...
+	@gcc -ansi -Wall chphostname.c -o chphostname
 
 clean:
-	rm -rf ${EXEC} 
+	@echo Cleaning...
+	@rm -rf chphostname
