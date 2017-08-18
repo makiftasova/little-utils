@@ -9,4 +9,5 @@ Copyright 2013 Mehmet Akif TAŞOVA <makiftasova@gmail.com>
 List of programs:
 
   * PrettyHostnameChanger -- Cahnges Pretty Hostname of OS 
+  * update-pip-packages -- Updates installed pip packages
  
